@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Metadata Cleaner</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/style.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      border-radius: 15px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+    }
+    .btn-custom {
+      background-color: #007bff;
+      color: white;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+    .btn-custom:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container container-fluid py-5 min-vh-100 d-flex align-items-center">
+    <div class="row justify-content-center w-100">
+      <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+        <div class="app-card card p-4 p-md-5">
+          <h2 class="text-center mb-3">🧹 Metadata Cleaner</h2>
+          <p class="text-center text-muted mb-4">Upload your file (JPG, PNG, PDF, DOCX) and remove hidden metadata instantly.</p>
+          
+          <div id="drop-zone" class="drop-zone text-center p-4 p-md-5 mb-3">
+            <div class="icon display-4">📁</div>
+            <div class="fw-semibold">Drag & drop a file here</div>
+            <div class="text-muted small">or click to browse (JPG, PNG, PDF, DOCX)</div>
+            <input id="file-input" class="visually-hidden" type="file" name="file" accept=".jpg,.jpeg,.png,.pdf,.docx">
+          </div>
+
+          <div id="preview" class="preview mb-3 d-none">
+            <div class="d-flex align-items-center gap-3">
+              <div id="thumb" class="thumb"></div>
+              <div>
+                <div id="file-name" class="fw-semibold"></div>
+                <div id="file-size" class="text-muted small"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="progress" role="progressbar" aria-label="Upload progress" aria-valuemin="0" aria-valuemax="100">
+              <div id="progress-bar" class="progress-bar" style="width: 0%">0%</div>
+            </div>
+          </div>
+
+          <div class="d-grid gap-2">
+            <button id="clean-btn" class="btn btn-custom" disabled>Clean Metadata & Download</button>
+            <button id="reset-btn" class="btn btn-outline-secondary" type="button">Reset</button>
+          </div>
+
+          <div class="mt-4 text-center small text-muted">
+            🔒 Privacy Friendly – No data is stored on server
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

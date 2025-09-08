@@ -1,0 +1,17 @@
+{
+  "name": "metadata-cleaner-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.js",
+  "description": "Electron wrapper for Metadata Cleaner (Flask backend)",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "postinstall": ""
+  },
+  "devDependencies": {
+    "electron": "^31.3.1"
+  }
+}
+
