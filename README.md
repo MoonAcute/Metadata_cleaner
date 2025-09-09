@@ -31,4 +31,4 @@ A minimal Electron wrapper is included under `desktop/` which launches the Flask
    ```
 Electron will spawn the Flask server using your current environment and open the UI.
 
-If you want packaging for macOS/Windows/Linux, I can add `electron-builder` scripts.
+
